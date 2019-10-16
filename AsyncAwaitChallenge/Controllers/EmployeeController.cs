@@ -9,6 +9,8 @@ using Microsoft.Extensions.Logging;
 namespace DemoAPI.Controllers
 {
            
+    // Change all the Controller methods for Supporting and Usage of async and await keyword
+    // Use Task.Fromresult method to return the Data 
     [ApiController]
     public class EmployeeController : Controller
     {
