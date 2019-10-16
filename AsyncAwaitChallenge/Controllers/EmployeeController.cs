@@ -10,7 +10,8 @@ namespace DemoAPI.Controllers
 {
            
     // Change all the Controller methods for Supporting and Usage of async and await keyword
-    // Use Task.Fromresult method to return the Data 
+    // Create a Service or Repository Layer - Implement DI Inject using .NET Core In-Built DI Container
+    // Hint - Use Task.Fromresult method to return the Data in async fashion 
     [ApiController]
     public class EmployeeController : Controller
     {
@@ -18,21 +19,7 @@ namespace DemoAPI.Controllers
         {
             logger.LogInformation("Created");
         }
-
-        [HttpGet]
-        [Route("api/employees/employee/{id}")]
-        public ActionResult<EmployeeData> GetByID(int id)
-        {
-            var employee = new EmployeeData()
-            {
-                ID = id,
-                FirstName = "Test",
-                LastName = "Test1",
-                DateOfBirth = DateTime.Now.AddYears(-30)
-            };
-
-            return Ok(employee);
-        }
+       
 
         [HttpGet]
         [Route("api/getallemployees")]
